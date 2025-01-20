@@ -1,0 +1,20 @@
+.btn-link.btn-primary,
+.btn-link.btn-primary:hover,
+.btn-link.btn-primary:focus {
+  color: #0d6efd !important;
+  background-color: transparent !important;
+}
+
+.btn-link.btn-danger,
+.btn-link.btn-danger:hover,
+.btn-link.btn-danger:focus {
+  color: #dc3545 !important;
+  background-color: transparent !important;
+}
+
+.btn-link.btn-warning,
+.btn-link.btn-warning:hover,
+.btn-link.btn-warning:focus {
+  color: #ffc107 !important;
+  background-color: transparent !important;
+}
