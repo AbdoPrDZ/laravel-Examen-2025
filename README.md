@@ -1,66 +1,99 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel CRUD Project for Managing Modules
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This is a simple Laravel project to manage modules. The project includes functionality to create, read, update, and delete (CRUD) modules with attributes such as name and hours.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Index Page**: Displays a table of all modules.
+- **Create/Edit Page**: Allows users to create a new module or edit an existing one.
+- **Factory button**: Generate a fake modules.
+- **Delete all button**: Delete all modules items.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Requirements
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- PHP >= 8.x
+- Composer
+- Laravel >= 10.x
+- MySQL
+- NodeJs => 22.x
 
-## Learning Laravel
+## Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Clone the repository:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```bash
+git clone https://github.com/yourusername/laravel_examen.git
+cd laravel_examen
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. Install dependencies:
 
-## Laravel Sponsors
+```bash
+composer install
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+3. Copy the `.env.example` file to `.env` and configure your database settings:
 
-### Premium Partners
+```bash
+cp .env.example .env
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+4. Generate an application key:
 
-## Contributing
+```bash
+php artisan key:generate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+5. Run the database migrations:
 
-## Code of Conduct
+```bash
+php artisan migrate
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+6. Serve the application:
 
-## Security Vulnerabilities
+```bash
+php artisan serve
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Usage
+
+- Navigate to `http://localhost:8000` to access the application.
+- Use the index page to view all modules.
+- Use the create/edit page to add a new module or edit an existing one.
+
+## Routes
+
+- **GET /modules**: Display the list of modules.
+- **GET /modules/create**: Show the form to create a new module.
+- **POST /modules**: Store a new module.
+- **GET /modules/{id}/edit**: Show the form to edit an existing module.
+- **POST /modules/{id}**: Update an existing module.
+- **GET /modules/{id}**: Delete a module.
+- **GET /modules/delete**: Delete all modules.
+- **GET /modules/factory**: Generate a fake modules.
+
+## Screenshots
+
+## Screenshots
+
+Here are some screenshots of the application:
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+  <img src="screenshots/1.png" alt="Screenshot 1" style="width: 100%;">
+  <img src="screenshots/2.png" alt="Screenshot 2" style="width: 100%;">
+  <img src="screenshots/3.png" alt="Screenshot 3" style="width: 100%;">
+  <img src="screenshots/4.png" alt="Screenshot 4" style="width: 100%;">
+</div>
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is open-source and available under the [MIT License](LICENSE.md).
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any changes.
+
+## Contact
+
+For any questions or inquiries, please contact us via [abdopr47@gmail.com](mailto:abdopr47@gmail.com), [WhatsApp](https://wa.me/213778185797), [Telegram](https://t.me/abdoprdz) or call us at +213778185797.

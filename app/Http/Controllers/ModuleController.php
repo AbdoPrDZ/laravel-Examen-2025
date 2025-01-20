@@ -38,10 +38,11 @@ class ModuleController extends Controller {
     return view('modules.index', compact('modules', 'search', 'sort', 'order', 'page', 'limit', 'message'));
   }
 
-  public function factory() {
-    Module::factory()->count(100)->create();
+  public function factory(Request $request) {
+    $count = $request->count ?? 10;
+    Module::factory()->count($count)->create();
 
-    session()->flash('message', '10 modules generated successfully');
+    session()->flash('message', "$count modules generated successfully");
     session()->flash('message_type', 'success');
 
     return redirect()->route('modules.index');

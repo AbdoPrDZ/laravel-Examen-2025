@@ -49,6 +49,11 @@
       </tr>
     </thead>
     <tbody>
+      @if ($modules->isEmpty())
+        <tr>
+          <td colspan="5" class="text-center">No modules found.</td>
+        </tr>
+      @endif
       @foreach ($modules as $module)
         <tr>
           <th scope="row">{{ $module->id }}</th>
